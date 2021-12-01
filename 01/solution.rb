@@ -20,3 +20,18 @@ end
 
 # 1215
 puts increases
+
+increases = 0
+last_sum = 0
+
+#part 2
+(2..input.length - 2).each do |index|
+  sum = input[index - 2] + input[index - 1] + input[index]
+  if compare(last_sum, sum)
+    increases += 1
+  end
+  last_sum = sum
+end
+
+# 1150
+puts increases
